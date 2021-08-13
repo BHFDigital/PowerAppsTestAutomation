@@ -66,8 +66,9 @@ jobs:
   - checkout: self
   - checkout: PowerAppsTestAutomation
   #- template: localsteps.yml # Provide optional local YAML template here
-  - template: frameworksteps.yml@PowerAppsTestAutomation
-    parameters:
+  - template: frameworksteps.yml
+  #- template: frameworksteps.yml@PowerAppsTestAutomation
+  parameters:
       OnlineUsername: $(OnlineUsername)
       OnlinePassword: $(OnlinePassword)
       OnlineUrl: $(PortalUrl)
