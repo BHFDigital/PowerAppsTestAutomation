@@ -8,7 +8,8 @@ resources:
       type: github
       # GitHub Repo(e.g. <FORK>/PowerAppsTestAutomation)
       # Recommended to Fork or Duplicate if custom auth flows are required
-      name: microsoft/PowerAppsTestAutomation
+      name: BHFDigital/PowerAppsTestAutomation
+      #name: microsoft/PowerAppsTestAutomation
       ref: master
       # Name of the GitHub OAuth ADO Service Connection
       endpoint: github.com_AlHal3
@@ -66,8 +67,8 @@ jobs:
   - checkout: self
   - checkout: PowerAppsTestAutomation
   #- template: localsteps.yml # Provide optional local YAML template here
-  - template: frameworksteps.yml
-  #- template: frameworksteps.yml@PowerAppsTestAutomation
+  #- template: frameworksteps.yml
+  - template: frameworksteps.yml@PowerAppsTestAutomation
     parameters:
       OnlineUsername: $(OnlineUsername)
       OnlinePassword: $(OnlinePassword)
