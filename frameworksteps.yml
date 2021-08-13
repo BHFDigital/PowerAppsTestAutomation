@@ -43,8 +43,11 @@ steps:
 
         solution: '${{parameters.RepositoryName}}/PowerAppsTestAutomation.sln'
 
-
-
+    - bash: |
+        dir 'D:\a\1\s'
+        dir 'D:\a\1\s\PowerAppsTestAutomation'
+       
+      
     - task: VSTest@2
 
       displayName: 'Run Power Apps Test Automation Tests via Chrome'
