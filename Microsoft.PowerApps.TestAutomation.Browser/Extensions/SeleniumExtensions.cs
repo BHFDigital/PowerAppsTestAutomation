@@ -544,9 +544,10 @@ namespace Microsoft.PowerApps.TestAutomation.Browser
                         Debug.WriteLine($"jsonResultString is {jsonResultString}.");
                         throw new Exception($"A timeout occurred while attempting to retrieve the ExecutionState of the current test. Current Execution State is: {testExecutionState}");
                     }
-                    catch (NullReferenceException)
+                    catch (NullReferenceException NRex)
                     {
-
+                        Console.WriteLine($"jsonResultString is {jsonResultString}.");
+Console.WriteLine(NRex.Message);
                     }
 
                     return state;
@@ -556,9 +557,10 @@ namespace Microsoft.PowerApps.TestAutomation.Browser
             {
                 throw new Exception($"A timeout occurred while attempting to retrieve the ExecutionState of the current test. {te}");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                        Console.WriteLine($"jsonResultString is {jsonResultString}.");
+Console.WriteLine(ex.Message);
             }
 
             Debug.WriteLine($"jsonResultString is {jsonResultString}.");
