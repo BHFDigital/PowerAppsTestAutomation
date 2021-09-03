@@ -146,10 +146,6 @@ namespace Microsoft.PowerApps.TestAutomation.Api
         public Tuple<int, int> ReportResultsToDevOps(JObject jObject, int testRunNumber)
         {
             var testExecutionMode = (int)jObject.GetValue("ExecutionMode");
-Console.WriteLine("\t" + 
-                   "jObjectResult:" );
-Console.WriteLine(jObject);
-Console.WriteLine("\t");
                    
             int passCount = 0;
             int failCount = 0;
